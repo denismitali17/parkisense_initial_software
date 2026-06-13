@@ -4,9 +4,9 @@ ParkiSense is a machine learning-powered mobile application that screens for Par
 
 The full system consists of three components:
 
-- **This repository** — FastAPI backend (Docker + Render)
-- **Flutter app** — Android mobile frontend
-- **Kaggle notebook** — ML training pipeline
+- **This repository**: FastAPI backend (Docker + Render)
+- **Flutter app**: Android mobile frontend
+- **Kaggle notebook**: ML training pipeline
 
 ---
 
@@ -184,21 +184,19 @@ Render URL: `https://parkisense-backend.onrender.com`
 
 The model was trained in a Kaggle notebook using:
 
-- **Dataset 1** — UCI Parkinson's Disease Dataset (Little et al., 2009) — 195 voice recordings, 22 features
-- **Dataset 2** — Parkinson's Speech with Multiple Types of Sound Recordings (Sakar et al., 2013) — 1,208 samples, 28 features
-- **Pipeline** — scikit-learn, librosa, imbalanced-learn, joblib
-- **Cross-validation** — Stratified 5-fold
-- **Class imbalance** — SMOTE applied to training folds only
+- **Dataset 1**: UCI Parkinson's Disease Dataset (Little et al., 2009) — 195 voice recordings, 22 features
+- **Dataset 2**: Parkinson's Speech with Multiple Types of Sound Recordings (Sakar et al., 2013) — 1,208 samples, 28 features
+- **Pipeline**: scikit-learn, librosa, imbalanced-learn, joblib
+- **Cross-validation**: Stratified 5-fold
+- **Class imbalance**: SMOTE applied to training folds only
 
-Kaggle notebook link: [insert link]
+Notebook link: https://github.com/denismitali17/parkisense_initial_software/blob/main/ml_track/notebook/pd-voice-detection-notebook.ipynb 
 
 ---
 
 ## Flutter App
 
-The Android mobile app is in a separate repository.
-
-Flutter app repo: [insert link]
+The Flutter app is located in the parkinse_app directory.
 
 It connects to this backend via the POST /predict endpoint, records voice samples at 44.1 kHz, extracts acoustic features, and displays the screening result with a confidence score.
 
@@ -225,5 +223,5 @@ ParkiSense is a research prototype developed as part of a BSc Software Engineeri
 ## Author
 
 Denis Mitali  
-BSc Software Engineering — African Leadership University  
 Supervisor: Simeon Nsabiyumva
+BSc Software Engineering — African Leadership University  
