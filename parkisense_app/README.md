@@ -1,17 +1,56 @@
-# parkisense_app
+# ParkiSense — Flutter Mobile App
 
-A new Flutter project.
+This is the Android mobile frontend for ParkiSense. It records a voice sample, extracts acoustic features, sends them to the FastAPI backend, and displays a Parkinson's disease screening result.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Setup
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter SDK 3.0 or higher
+- Android Studio with an emulator (Pixel 6, API 33 recommended)
+- A running instance of the ParkiSense backend
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Steps
+
+```bash
+# Navigate to the app directory
+cd mobile/parkisense_app
+
+# Install dependencies
+flutter pub get
+
+# Run on emulator
+flutter run
+```
+
+---
+
+## Backend URL
+
+The app points to the live backend by default. To change it, open `lib/constants.dart` and update:
+
+```dart
+static const String baseUrl = 'https://parkisense-backend.onrender.com';
+```
+
+---
+
+## App Screens
+
+| Screen | Description |
+|--------|-------------|
+| Home | Introduction, disclaimer, and start button |
+| Record | Microphone recording with live status indicator |
+| Result | Prediction result, confidence score, and features analysed |
+
+---
+
+## Tech Stack
+
+- Flutter (Dart)
+- flutter_sound — audio recording
+- http — API communication
+- path_provider — file storage
+- permission_handler — microphone permission
