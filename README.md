@@ -291,13 +291,16 @@ The Flutter app is located in the parkinse_app directory.
 It connects to this backend via the POST /predict endpoint, records voice samples at 44.1 kHz, extracts acoustic features, and displays the screening result with a confidence score.
 
 ### Screen 1
-![alt text](Flutter1.png)
+<img width="293" height="658" alt="Flutter1" src="https://github.com/user-attachments/assets/24a2d6e1-9b2d-4f7f-8a8f-ab6ed58fc7ee" />
+
 
 ### Screen 2
-![alt text](Flutter2.png)
+<img width="294" height="660" alt="Flutter2" src="https://github.com/user-attachments/assets/2522cfe8-643b-411a-a55b-662e65f24c50" />
+
 
 ### Screen 3
-![alt text](Flutter3.png)
+<img width="298" height="659" alt="Flutter3" src="https://github.com/user-attachments/assets/4a500a0d-b47a-4c77-b403-e25a854ebcce" />
+
 
 ---
 
