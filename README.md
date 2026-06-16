@@ -326,4 +326,3 @@ ParkiSense is a research prototype developed as part of a BSc Software Engineeri
 
 Denis Mitali  
 Supervisor: Simeon Nsabiyumva
-BSc Software Engineering — African Leadership University  
