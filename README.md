@@ -98,7 +98,7 @@ The model uses 10 acoustic features selected by Random Forest feature importance
 | GET    | /features | Returns the list of required features |
 | POST   | /predict  | Accepts features, returns prediction  |
 
-### POST /predict — Request Body
+### POST /predict: Request Body
 
 ```json
 {
@@ -114,17 +114,6 @@ The model uses 10 acoustic features selected by Random Forest feature importance
     "MDVP:Jitter(Abs)": 0.00007,
     "Shimmer:APQ5": 0.03400
   }
-}
-```
-
-### POST /predict — Response
-
-```json
-{
-  "prediction": 1,
-  "label": "Parkinson's Detected",
-  "confidence": 95.92,
-  "features_used": ["PPE", "spread1", "MDVP:Fo(Hz)", "spread2", "MDVP:Flo(Hz)", "MDVP:Fhi(Hz)", "Jitter:DDP", "NHR", "MDVP:Jitter(Abs)", "Shimmer:APQ5"]
 }
 ```
 
@@ -280,8 +269,6 @@ The model was trained in a Kaggle notebook using:
 - **Cross-validation**: Stratified 5-fold
 - **Class imbalance**: SMOTE applied to training folds only
 
-Notebook link: https://github.com/denismitali17/parkisense_initial_software/blob/main/ml_track/notebook/pd-voice-detection-notebook.ipynb 
-
 ---
 
 ## Flutter App
@@ -289,18 +276,6 @@ Notebook link: https://github.com/denismitali17/parkisense_initial_software/blob
 The Flutter app is located in the parkinse_app directory.
 
 It connects to this backend via the POST /predict endpoint, records voice samples at 44.1 kHz, extracts acoustic features, and displays the screening result with a confidence score.
-
-### Screen 1
-<img width="293" height="658" alt="Flutter1" src="https://github.com/user-attachments/assets/24a2d6e1-9b2d-4f7f-8a8f-ab6ed58fc7ee" />
-
-
-### Screen 2
-<img width="294" height="660" alt="Flutter2" src="https://github.com/user-attachments/assets/2522cfe8-643b-411a-a55b-662e65f24c50" />
-
-
-### Screen 3
-<img width="298" height="659" alt="Flutter3" src="https://github.com/user-attachments/assets/4a500a0d-b47a-4c77-b403-e25a854ebcce" />
-
 
 ---
 
@@ -313,12 +288,6 @@ It connects to this backend via the POST /predict endpoint, records voice sample
 | ML       | scikit-learn, librosa, joblib   |
 | Deployment | Docker + Render               |
 | Training | Kaggle Notebooks (free GPU)     |
-
----
-
-## Disclaimer
-
-ParkiSense is a research prototype developed as part of a BSc Software Engineering capstone project at African Leadership University. It is not a validated medical device and should not be used as a substitute for professional medical advice. All results should be interpreted by a qualified healthcare professional.
 
 ---
 
