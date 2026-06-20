@@ -26,6 +26,16 @@ https://parkisense-backend.onrender.com/docs
 
 ---
 
+## Video
+
+The link to the YouTube video:
+
+```
+http://youtube.com/watch?v=1Nt_CpwLaZo 
+```
+
+---
+
 ## Project Structure
 
 ```
